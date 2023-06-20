@@ -15,7 +15,7 @@ const icon = {
 };
 
 export const PathAnimation = () => (
-  <motion.div className="w-1/5" initial={{y:0}} animate={{y:-600}} transition={{delay: 3, duration: 0.9, ease: [0.4, 0.71, 0.2, 1.01]}} >
+  <motion.div className="w-1/5 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 absolute animate-[2s_test-anim_2s_ease-in-out_forwards]" transition={{delay: 3, duration: 0.9, ease: [0.4, 0.71, 0.2, 1.01]}} >
     <motion.svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 782 741"
