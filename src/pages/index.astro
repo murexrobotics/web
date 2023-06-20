@@ -1,18 +1,22 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import ImageGallery from '../components/ImageGallery';
 ---
 
 <Layout title="MUREX Robotics - Phillips Exeter Academy" animated={true}>
-	<main class="flex justify-center items-center">
+	<main class="flex justify-center items-center h-screen">
 		<div class="absolute"><span id="element" class="font-hype font-extrabold z-10 text-gradient text-9xl"/></div>
+	</main>
+	<main class="flex justify-center h-screen opacity-0 animate-[1s_fade-in_2s_forwards]">
+		<ImageGallery client:load/>
 	</main>
 </Layout>
 
 <script>
 	import Typed from 'typed.js';
 	const typed = new Typed('#element', {
-		strings: ['Attempt ^300 the ^300 impossible', 'MUREX ^300 Robotics'],
-		startDelay: 3000,
+		strings: ['Attempt ^300 the ^300 impossible.', 'This is ^500 MUREX ^300 Robotics.'],
+		startDelay: 1500,
 		typeSpeed: 40,
 	});
 </script>

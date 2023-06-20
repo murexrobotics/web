@@ -8,15 +8,15 @@ const { animated } = Astro.props;
 
 ---
 
-<div class="w-screen flex my-[70px] font-sans text-white text-xl fixed">
-    <div class={"w-1/2 flex gap-16 justify-end pr-40 self-start font-medium opacity-0 " + (animated ? "animate-[0.75s_fade-in_3.3s_ease-in_forwards]" : "animate-[0.75s_fade-in_0s_ease-in_forwards]")}>
+<div class="w-screen flex py-[70px] font-sans text-white text-xl fixed z-50 bg-gradient-to-b from-neutral-950 ">
+    <div class={"w-1/2 flex gap-16 justify-end pr-40 self-start font-medium opacity-0 " + (animated ? "animate-[0.75s_fade-in_1.3s_ease-in_forwards]" : "animate-[0.75s_fade-in_0s_ease-in_forwards]")}>
         <a href="/about" class="transition-all duration-300 hover:scale-105">About</a>
         <a href="" class="transition-all duration-300 hover:scale-105">Our Team</a>
     </div>
     <a href="/">
-        <PathAnimation animated={animated} client:visible/>
+        <PathAnimation animated={animated} client:load/>
     </a>
-    <div class={"w-1/2 flex gap-16 justify-start pl-40 self-end font-medium opacity-0 " + (animated ? "animate-[0.75s_fade-in_3.3s_ease-in_forwards]" : "animate-[0.75s_fade-in_0s_ease-in_forwards]")}>
+    <div class={"w-1/2 flex gap-16 justify-start pl-40 self-end font-medium opacity-0 " + (animated ? "animate-[0.75s_fade-in_1.3s_ease-in_forwards]" : "animate-[0.75s_fade-in_0s_ease-in_forwards]")}>
         <a href="" class="transition-all duration-300 hover:scale-105">Innovation</a>
         <a href="https://docs.murexrobotics.com" class="transition-all duration-300 hover:scale-105">Docs</a>
     </div>

@@ -17,11 +17,11 @@ export default function PathAnimation(props) {
   let animated = "animate-[0s_logo_0s_ease-in-out_forwards,0.75s_fade-in_ease-in-out_forwards]";
   let svg_init = "visible";
   if (props.animated === true) {
-    animated = "animate-[2s_logo_2s_ease-in-out_forwards]";
+    animated = "animate-[1s_logo_1s_ease-in-out_forwards]";
     svg_init = "hidden";
   }
   return (
-    <motion.div className={"w-1/5 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 fixed " + animated} transition={{delay: 3, duration: 0.9, ease: [0.4, 0.71, 0.2, 1.01]}} >
+    <motion.div className={"w-1/5 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 fixed " + animated} transition={{delay: 0.5, duration: 0.5, ease: [0.4, 0.71, 0.2, 1.01]}} >
     <motion.svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 782 741"
@@ -33,8 +33,8 @@ export default function PathAnimation(props) {
         initial={svg_init}
         animate="visible"
         transition={{
-          default: { duration: 3, ease: "easeInOut" },
-          fill: { duration: 2.5, delay: 1, ease: [1, 0, 0.3, 0.5] }
+          default: { duration: 1, ease: "easeInOut" },
+          fill: { duration: 1.5, delay: 0.5, ease: [1, 0, 0.3, 0.5] }
         }}
       />
     </motion.svg>
