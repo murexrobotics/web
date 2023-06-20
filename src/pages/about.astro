@@ -3,6 +3,33 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="MUREX Robotics - Phillips Exeter Academy" animated={false}>
-	<main class="flex justify-center w-screen">
+	<main class="flex justify-center flex-row flex-wrap w-1/2 h-max pt-48 animate-[0.75s_fade-in_ease-in-out]">
+		<div class="flex justify-start w-full pb-8">
+			<div>
+				<h1 class="text-white font-hype font-bold text-5xl">
+					This is MUREX Robotics.
+				</h1>
+				<div class="flex justify-start w-full pt-3">
+					<a href="https://www.github.com/murexrobotics/">
+						<img src="github.svg" alt="Github Social Link" class="w-8 h-8 invert">
+					</a>
+					<a href="https://www.linkedin.com/company/murex-robotics/">
+						<img src="linkedin.svg" alt="Linkedin Social Link" class="w-8 h-8 invert">
+					</a>
+				</div>
+			</div>
+			<div class="flex flex-col gap-5">
+				<p class="text-white font-hype font-normal text-1xl">
+					We are a <b>robotics team</b> from <b>Phillips Exeter Academy</b>, a high school in Exeter, New Hampshire.
+				</p>
+				<p class="text-white font-hype font-normal text-1xl">
+					A team consisting of <b>10+</b> (and counting!) dedicated members entering our third year, we compete in the <b>MATE ROV Competition</b> under the Ranger division.
+				</p>
+				<p class="text-white font-hype font-normal text-1xl">
+					Our team specializes in <b>highly integrated</b> design and technology, with a focus on matching the pace of <b>industry-level ROVs</b> while <b>maximizing</b> simplicity, efficiency and cost-effectiveness.
+				</p>
+			</div>
+		</div>
+		<a href="https:/www.exeter.edu" target="_blank" rel="noopener noreferrer"><img src="/images/map_location.jpg" class="w-full h-auto"></a>
 	</main>
 </Layout>
