@@ -1,12 +1,10 @@
 ---
-import { PathAnimation } from '../components/PathAnimation';
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="MUREX Robotics - Phillips Exeter Academy">
-	<PathAnimation client:visible/>
+<Layout title="MUREX Robotics - Phillips Exeter Academy" animated={false}>
 	<main class="flex justify-center items-center">
-		<div class="absolute"><p id="element" class="font-hype font-extrabold z-10 text-gradient text-9xl"/></div>
+		<div class="absolute"><span id="element" class="font-hype font-extrabold z-10 text-gradient text-9xl"/></div>
 	</main>
 </Layout>
 
@@ -18,29 +16,3 @@ import Layout from '../layouts/Layout.astro';
 		typeSpeed: 40,
 	});
 </script>
-
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		width: 100vw;
-		height: 100vh;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	@keyframes test-anim {
-		0% {
-			@apply top-1/2;
-			@apply w-1/5;
-		}
-		100% {
-			@apply top-[90px];
-			@apply w-[3%];
-		}
-	}
-</style>
