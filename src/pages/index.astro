@@ -4,12 +4,45 @@ import ImageGallery from '../components/ImageGallery';
 ---
 
 <Layout title="MUREX Robotics - Phillips Exeter Academy" animated={true}>
-	<main class="flex justify-center items-center h-screen">
-		<div class="absolute"><span id="element" class="font-hype font-extrabold z-10 text-gradient text-9xl"/></div>
-	</main>
-	<main class="flex justify-center h-screen opacity-0 animate-[1s_fade-in_2s_forwards]">
-		<ImageGallery client:only="react"/>
-	</main>
+	<div class="min-h-screen">
+		<main class="flex justify-center items-center h-screen w-screen">
+			<div class="absolute flex justify-center items-center"><span id="element" class="font-hype font-extrabold z-10 text-gradient text-9xl text-center"/></div>
+		</main>
+		<main class="flex justify-center items-center h-1/2 w-3/4 py-24 opacity-0 animate-[0.75s_fade-in_1.2s_ease-in-out_forwards]">
+			<div class="w-full flex justify-center items-start flex-wrap flex-col">
+				<span class="font-hype font-extrabold z-10 text-gradient text-7xl text-center">
+					DO IT RIGHT.
+				</span>
+				<span class="font-hype font-extrabold z-10 text-gradient text-7xl text-center">
+					DO IT MUREX.
+				</span>
+				<span class="font-sans text-white max-w-md">
+					MUREX isn't just another high school robotics team. With a vision to revolutionize the underwater robotics industry, we push technological boundaries and contribute to the community around us. MUREX doesn't cut corners. We do it right.
+				</span>
+			</div>
+		</main>
+		<main class="flex justify-center items-center h-1/2 w-3/4 py-24 opacity-0 animate-[0.75s_fade-in_1.2s_ease-in-out_forwards]">
+			<div class="w-full flex justify-center items-end flex-wrap flex-col">
+				<span class="font-hype font-extrabold z-10 text-gradient text-7xl text-center">
+					OPEN SOURCE.
+				</span>
+				<span class="font-hype font-extrabold z-10 text-gradient text-7xl text-center">
+					OPEN SOURCE.
+				</span>
+				<span class="font-sans text-white max-w-md text-right">
+					We fully embrace open source, making sure all of our innovations are available to the community that allowed us to innovate in the first place as well as inspiring the next generation of engineers.
+				</span>
+			</div>
+		</main>
+		<main class="flex justify-center h-full opacity-0 animate-[1s_fade-in_2s_forwards] pt-48">
+			<ImageGallery client:only="react"/>
+		</main>
+		<main class="flex justify-center items-center h-1/2 w-3/4 py-24">
+			<span class="font-hype font-extrabold z-10 text-gradient text-7xl text-center">
+				THE FUTURE IS NOW.
+			</span>
+		</main>
+	</div>
 </Layout>
 
 <script>
