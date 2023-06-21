@@ -23,6 +23,7 @@
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.9.0",
     "react-parallax-tilt": "^1.7.148",
     "react-photo-album": "^2.2.2",
     "react-responsive-masonry": "^2.1.7",

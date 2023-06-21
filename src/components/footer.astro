@@ -7,24 +7,34 @@ import linkedin from "/linkedin.svg";
 <footer
 	class="flex items-center flex-col md:flex-row justify-between md:py-10 md:px-24 py-8 px-6 text-white"
 >
-	<div class="flex flex-col justify-start gap-5 pb-6">
+	<div class="flex flex-col justify-end gap-5">
 		<a href="/" aria-label="MUREX Logo Horizontal">
 			<img
 				src={mainLogo}
 				alt=""
-				class="aspect-auto md:w-72 w-52 h-24 md:h-32"
+				class="md:w-28 w-16 h-auto"
 			/>
 		</a>
+		<div class="hidden w-full text-xs md:flex self-end">
+			<p>
+				© 2023, MUREX (MATE Underwater Robotics At Exeter)
+			</p>
+		</div>
 	</div>
 	<div
-		class="flex flex-row flex-wrap md:flex-col justify-center md:justify-end md:text-right font-sans font-normal text-sm md:text-md"
+		class="flex flex-row flex-wrap md:flex-col px-8 md:px-0 justify-center md:justify-end md:text-right font-sans font-normal text-sm md:text-md"
 	>
-		<a class="py-1" href="/">Home</a>
-		<a class="py-1" href="/about">About</a>
-		<a class="py-1" href="/ourteam">Our Team</a>
-		<a class="py-1" href="/innovation">Innovation</a>
-		<a class="py-1" href="https://docs.murexrobotics.com/" target="_blank">Docs</a>
-		<div class="flex w-full justify-end items-end">
+		<a class="py-1 px-4 md:px-0" href="/">Home</a>
+		<a class="py-1 px-4 md:px-0" href="/about">About</a>
+		<a class="py-1 px-4 md:px-0" href="/ourteam">Our Team</a>
+		<a class="py-1 px-4 md:px-0" href="/innovation">Innovation</a>
+		<a class="py-1 px-4 md:px-0" href="https://docs.murexrobotics.com/" target="_blank">Docs</a>
+		<div class="flex w-full justify-center items-center py-4 md:py-0 md:justify-end md:items-end md:hidden">
+			<p>
+				© 2023, MUREX (MATE Underwater Robotics At Exeter)
+			</p>
+		</div>
+		<div class="flex w-full justify-center items-center py-2 md:py-0 md:justify-end md:items-end">
 			<a
 				href="https://www.github.com/murexrobotics/"
 				class="flex md:flex-row-reverse invert"

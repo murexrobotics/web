@@ -5,7 +5,7 @@ import Tilt from 'react-parallax-tilt';
 
 <Layout title="MUREX Robotics - Our Team" animated={false}>
 	<main
-		class="flex justify-center flex-row flex-wrap w-1/2 min-h-screen pt-48 animate-[0.75s_fade-in_ease-in-out]"
+		class="flex justify-center flex-row flex-wrap w-11/12 md:w-1/2 min-h-screen pt-48 animate-[0.75s_fade-in_ease-in-out]"
 	>
 		<img src="/images/gallery6-centered.jpg" alt="Team Photo" class="" />
 		<div class="w-full flex justify-end">
@@ -15,12 +15,12 @@ import Tilt from 'react-parallax-tilt';
 		</div>
         <hr class="w-full border-white my-6 opacity-50">
         <div class="w-full flex justify-start">
-            <h1 class="text-white font-sans font-extrabold text-6xl pb-6">
+            <h1 class="text-white font-sans font-extrabold text-4xl md:text-6xl pb-6">
                 2023-2024 Team
             </h1>
         </div>
 		<div
-			class="grid h-max w-full gap-8 grid-cols-4 text-white"
+			class="grid h-max w-full gap-8 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 text-white"
 		>
 			<Tilt glareEnable={true} tiltReverse={true} client:load>
                 <div class="col-span-1 flex flex-col">

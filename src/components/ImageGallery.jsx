@@ -19,7 +19,7 @@ const images = [
 
 export default function ImageGallery() {
     return (
-        <div className="w-3/4 h-full">
+        <div className="w-11/12 md:w-3/4 h-full">
             <ResponsiveMasonry
                 columnsCountBreakPoints={{350: 1, 750: 2, 900: 3}}
             >
