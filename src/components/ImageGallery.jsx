@@ -33,8 +33,8 @@ export default function ImageGallery() {
 							/>
                             <div className="absolute w-full h-full transition-all duration-200 ease-in-out bg-gradient-to-t from-neutral-950 to-transparent opacity-0 top-0 bottom-0 left-0 right-0 group-hover:opacity-50"></div>
                             <div className="absolute p-6 md:p-8 2xl:p-12 flex flex-col justify-end items-start w-full h-full transition-all duration-200 ease-in-out opacity-0 top-0 bottom-0 left-0 right-0 group-hover:opacity-100">
-								<p className="text-white text-sm md:text-sm 2xl:text-3xl font-bold font-hype">{image.date}</p>
-								<p className="text-white text-xs md:text-xs 2xl:text-xl font-normal font-hype">{image.desc}</p>
+								<p className="text-white text-sm xl:text-3xl font-bold font-hype">{image.date}</p>
+								<p className="text-white text-xs xl:text-base font-normal font-hype">{image.desc}</p>
 							</div>
 						</div>
 					))}
