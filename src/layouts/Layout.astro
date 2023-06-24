@@ -1,6 +1,7 @@
 ---
-import Navbar from '../components/navbar.astro';
-import Footer from '../components/footer.astro';
+import Navbar from "../components/navbar.astro";
+import Footer from "../components/footer.astro";
+import { SEO } from "astro-seo";
 export interface Props {
 	title: string;
 	animated: boolean;
@@ -13,89 +14,109 @@ const { title, animated } = Astro.props;
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Welcome to MUREX Robotics, a competitive underwater robotics team based in Exeter, New Hampshire. We attempt the impossible." />
+		<meta
+			name="description"
+			content="Welcome to MUREX Robotics, a competitive underwater robotics team based in Exeter, New Hampshire. We attempt the impossible."
+		/>
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" type="image/x-icon" href="/favicon.ico">
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<SEO
+			title="MUREX Robotics, a competitive underwater robotics team building highly performant ROVs"
+			description="We are MUREX Robotics, a high school underwater robotics team from Phillips Exeter Academy in Exeter, NH, competing in the MATE ROV competition under the Ranger division. We build open-source highly performant and integrated ROVs that match industry-level performance while maximizing cost-efficiency."
+			openGraph={{
+				basic: {
+					title: "We are MUREX Robotics, a high school underwater robotics team from Phillips Exeter Academy in Exeter, NH, competing in the MATE ROV competition under the Ranger division. We build open-source highly performant and integrated ROVs that match industry-level performance while maximizing cost-efficiency.",
+					type: "website",
+					image: "https://www.murexrobotics.com/images/logo.png",
+				},
+				optional: {
+					description: "We are MUREX Robotics, a high school underwater robotics team from Phillips Exeter Academy in Exeter, NH, competing in the MATE ROV competition under the Ranger division. We build open-source highly performant and integrated ROVs that match industry-level performance while maximizing cost-efficiency.",
+				},
+			}}
+			extend={{
+				// extending the default link tags
+				link: [{ rel: "icon", href: "/favicon.ico" }],
+			}}
+		/>
 	</head>
 	<body>
-		<Navbar animated={animated}/>
+		<Navbar animated={animated} />
 		<slot />
-		<Footer/>
-	</body>
+		<Footer />
+	</body><style is:global>
+		:root {
+			overflow-x: hidden;
+			margin: 0;
+			padding: 0;
+
+			--accent-gradient: linear-gradient(
+				45deg,
+				#d2d2d2,
+				#ffffff 30%,
+				white 60%
+			);
+
+			color-scheme: light, dark;
+
+			font-synthesis: none;
+			text-rendering: optimizeLegibility;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			-webkit-text-size-adjust: 100%;
+		}
+		html {
+			font-family: system-ui, sans-serif;
+			background-color: #1a1a1a;
+		}
+		.typed-cursor {
+			display: none;
+		}
+		@font-face {
+			font-family: "JetBrains Mono";
+			src: url("/JetBrainsMono-Variable.ttf") format("opentype");
+			font-display: auto;
+			font-style: normal;
+			font-stretch: normal;
+		}
+		main {
+			margin: auto;
+			padding: 1.5rem;
+			width: 100vw;
+		}
+		.text-gradient {
+			background-image: var(--accent-gradient);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-size: 400%;
+			background-position: 0%;
+		}
+		.item {
+			stroke: #fff;
+			stroke-width: 0.8;
+			stroke-linejoin: miter;
+			stroke-linecap: butt;
+		}
+		@keyframes logo {
+			0% {
+				@apply top-1/2;
+				@apply w-1/5;
+			}
+			100% {
+				@apply top-[90px];
+				@apply md:w-20;
+				@apply w-16;
+			}
+		}
+		@keyframes fade-in {
+			0% {
+				@apply opacity-0;
+			}
+			100% {
+				@apply opacity-100;
+			}
+		}
+	</style>
 </html>
-<style is:global>
-	:root {
-		overflow-x: hidden;
-		margin: 0;
-		padding: 0;
-
-		--accent-gradient: linear-gradient(
-			45deg,
-			#d2d2d2,
-			#ffffff 30%,
-			white 60%
-		);
-
-		color-scheme: light, dark;
-
-		font-synthesis: none;
-		text-rendering: optimizeLegibility;
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
-		-webkit-text-size-adjust: 100%;
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background-color: #1a1a1a;
-	}
-	.typed-cursor {
-		display: none;
-	}
-	@font-face {
-		font-family: "JetBrains Mono";
-		src: url("/JetBrainsMono-Variable.ttf") format("opentype");
-		font-display: auto;
-		font-style: normal;
-		font-stretch: normal;
-	}
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		width: 100vw;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.item {
-		stroke: #fff;
-		stroke-width: 0.8;
-		stroke-linejoin: miter;
-		stroke-linecap: butt;
-	}
-	@keyframes logo {
-		0% {
-			@apply top-1/2;
-			@apply w-1/5;
-		}
-		100% {
-			@apply top-[90px];
-			@apply md:w-20;
-			@apply w-16;
-		}
-	}
-	@keyframes fade-in {
-		0% {
-			@apply opacity-0;
-		}
-		100% {
-			@apply opacity-100;
-		}
-	}
-</style>
