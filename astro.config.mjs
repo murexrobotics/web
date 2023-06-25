@@ -9,5 +9,6 @@ import svelte from "@astrojs/svelte";
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://www.murexrobotics.com",
   integrations: [tailwind(), react(), partytown(), prefetch(), sitemap(), svelte()],
 });
