@@ -19,9 +19,8 @@ const { title, animated } = Astro.props;
 			content="We are MUREX Robotics, a high school underwater robotics team from Phillips Exeter Academy in Exeter, NH, competing in the MATE ROV competition under the Ranger division. We build open-source highly performant and integrated ROVs that match industry-level performance while maximizing cost-efficiency."
 		/>
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" href="/favicon.ico" />
-		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/png" href="/favicon.png">
 		<meta name="generator" content={Astro.generator} />
 		<link rel="sitemap" href="/sitemap-index.xml" />
 		<title>{title + " - MUREX Robotics"}</title>
@@ -45,10 +44,6 @@ const { title, animated } = Astro.props;
 						"We are MUREX Robotics, a high school underwater robotics team from Phillips Exeter Academy in Exeter, NH, competing in the MATE ROV competition under the Ranger division. We build open-source, highly performant, and highly integrated ROVs that match industry-level performance while maximizing cost-efficiency.",
 					locale: "en",
 				},
-			}}
-			extend={{
-				// extending the default link tags
-				link: [{ rel: "icon", href: "/favicon.ico" }],
 			}}
 		/>
 	</head>
