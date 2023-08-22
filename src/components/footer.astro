@@ -2,10 +2,11 @@
 import mainLogo from "/logo-white.svg";
 import github from "/github.svg";
 import linkedin from "/linkedin.svg";
+import instagram from "/instagram.svg";
 ---
 
 <footer
-	class="flex items-center flex-col md:flex-row justify-between md:py-10 md:px-24 py-8 px-6 text-white"
+	class="flex items-center flex-col md:flex-row justify-between md:py-10 md:px-24 py-8 px-6 text-white bg-gradient-to-t from-neutral-900"
 >
 	<div class="flex flex-col justify-end gap-5">
 		<a href="/" aria-label="MUREX Logo Horizontal">
@@ -32,14 +33,6 @@ import linkedin from "/linkedin.svg";
 		<a class="py-1 px-4 md:px-0" href="/ourteam">Our Team</a>
 		<a class="py-1 px-4 md:px-0" href="/innovation">Innovation</a>
 		<a class="py-1 px-4 md:px-0" href="https://docs.murexrobotics.com/" target="_blank">Docs</a>
-		<div class="flex w-full flex-col gap-1 text-xs justify-center items-center py-4 md:py-0 md:justify-end md:items-end md:hidden">
-			<p>
-				Thank you to Alinne and Brenda Romero-Torres '24 for designing the logo!
-			</p>
-			<p>
-				© {new Date().getFullYear()}, MUREX
-			</p>
-		</div>
 		<div class="flex w-full justify-center items-center py-2 md:py-0 md:justify-end md:items-end">
 			<a
 				href="https://www.github.com/murexrobotics/"
@@ -53,8 +46,24 @@ import linkedin from "/linkedin.svg";
 				class="flex md:flex-row-reverse invert"
 				aria-label="LinkedIn Link"
 			>
+				<img src={instagram} alt="" class="h-6 w-6 md:h-8 md:w-8" />
+			</a>
+			<a
+				href="https://www.linkedin.com/company/murex-robotics/"
+				class="flex md:flex-row-reverse invert"
+				aria-label="LinkedIn Link"
+			>
 				<img src={linkedin} alt="" class="h-6 w-6 md:h-8 md:w-8" />
 			</a>
+		</div>
+		<span>Email us at: <a class="py-1 px-4 md:px-0 underline" href="mailto:murex@murexrobotics.com" target="_blank">murex@murexrobotics.com</a></span>
+		<div class="flex w-full flex-col gap-1 text-xs justify-center items-center py-4 md:py-0 md:justify-end md:items-end md:hidden">
+			<p>
+				Thank you to Alinne and Brenda Romero-Torres '24 for designing the logo!
+			</p>
+			<p>
+				© {new Date().getFullYear()}, MUREX
+			</p>
 		</div>
 	</div>
 </footer>
