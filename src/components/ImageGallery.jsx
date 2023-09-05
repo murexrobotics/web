@@ -19,13 +19,13 @@ const images = [
 
 export default function ImageGallery() {
 	return (
-		<div className="w-11/12 md:w-3/4 h-full">
+		<div className="w-screen px-4 md:px-10 2xl:w-3/4 h-full">
 			<ResponsiveMasonry
 				columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}
 			>
 				<Masonry>
 					{images.map((image, i) => (
-						<div className="p-4 relative group" key={i}>
+						<div className="p-1 lg:p-4 relative group" key={i}>
 							<img
 								src={image.src}
 								className="w-full block transition-all duration-150 ease-in-out"
