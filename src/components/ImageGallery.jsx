@@ -6,7 +6,7 @@ const images = [
 	{src: "/images/gallery23.png", desc: "First in-person meeting of the 2024 season!", date: "September 2023"},
 	{src: "/images/gallery22.png", desc: "3D render of the MUREX Power Board", date: "September 2023"},
 	{src: "/images/gallery21.png", desc: "3D render of the MUREX ESC Carrier Board", date: "September 2023"},
-	{src: "/images/gallery19.png", desc: "Max assembling the MUREX Carrier Board", date: "September 2023"},
+	{src: "/images/gallery19.png", desc: "Max assembling the MUREX Power Board", date: "September 2023"},
 	{src: "/images/gallery18.png", desc: "Altan and Max making the MUREX NFC Business Cards", date: "September 2023"},
 	{src: "/images/gallery16.png", desc: "Photograph of initial MUREX Carrier Board testing", date: "August 2023"},
 	{src: "/images/gallery15.jpg", desc: "3D render of the MUREX Carrier Board", date: "August 2023"},
