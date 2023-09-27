@@ -33,9 +33,6 @@ export default function Menu() {
 						<a href="/">Home</a>
 					</li>
 					<li className="hover:-translate-x-3 duration-200">
-						<a href="https://forms.gle/3HH4MWa4dLT1mdMJ6" target="_blank">Tryouts</a>
-					</li>
-					<li className="hover:-translate-x-3 duration-200">
 						<a href="/about">About</a>
 					</li>
 					<li className="hover:-translate-x-3 duration-200">

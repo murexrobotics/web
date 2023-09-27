@@ -13,14 +13,13 @@ const { animated } = Astro.props;
     <div class={"w-1/2 flex gap-16 justify-start md:justify-end md:pr-40 self-start font-medium opacity-0 " + (animated ? "animate-[0.75s_fade-in_1.3s_ease-in_forwards]" : "animate-[0.75s_fade-in_0s_ease-in_forwards]")}>
         <Menu client:load/>
         <a href="/about" class="transition-all duration-300 hover:scale-105 hidden md:block">About</a>
-        <a href="https://forms.gle/3HH4MWa4dLT1mdMJ6" target="_blank" class="transition-all duration-300 hover:scale-105 hidden md:block">Tryouts</a>
+        <a href="/ourteam" class="transition-all duration-300 hover:scale-105 hidden md:block">Our Team</a>
     </div>
     <a href="/">
         <PathAnimation animated={animated} client:load/>
     </a>
     <div class={"w-1/2 flex gap-16 justify-start pl-40 self-end font-medium opacity-0 " + (animated ? "animate-[0.75s_fade-in_1.3s_ease-in_forwards]" : "animate-[0.75s_fade-in_0s_ease-in_forwards]")}>
-        <a href="/ourteam" class="transition-all duration-300 hover:scale-105 hidden md:block">Our Team</a>
-        <!-- <a href="/innovation" class="transition-all duration-300 hover:scale-105 hidden md:block">Innovation</a> -->
+        <a href="/innovation" class="transition-all duration-300 hover:scale-105 hidden md:block">Innovation</a>
         <a href="https://docs.murexrobotics.com" target="_blank" class="transition-all duration-300 hover:scale-105 hidden md:block">Docs</a>
     </div>
 </div>

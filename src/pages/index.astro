@@ -103,11 +103,16 @@ import ImageGallery from "../components/ImageGallery";
 		>
 			<ImageGallery client:only="react" />
 		</main>
-		<main class="flex justify-center items-center h-1/2 w-3/4 py-24">
+		<main class="flex justify-center flex-col items-center h-1/2 w-3/4 py-24">
 			<span
 				class="font-hype font-extrabold z-10 text-gradient text-5xl md:text-7xl text-center"
 			>
-				ATTEMPT THE IMPOSSIBLE.
+				UNPARALLELED INNOVATION FOR ALL.
+			</span>
+			<span
+				class="font-hype font-extrabold z-10 text-gradient text-5xl md:text-7xl text-center"
+			>
+				A NEW GENERATION OF HIGH PERFORMANCE ROVs.
 			</span>
 		</main>
 	</div>
@@ -116,8 +121,7 @@ import ImageGallery from "../components/ImageGallery";
 <script>
 	import Typed from "typed.js";
 	const typed = new Typed("#element", {
-		// strings: ['Attempt ^300 the ^300 impossible.', 'We are ^500 MUREX ^300 Robotics.'],
-		strings: ["Click to join the ^300 impossible. ^1000", "Apply now."],
+		strings: ['Attempt ^300 the ^300 impossible.', 'We are ^500 MUREX ^300 Robotics.'],
 		startDelay: 1500,
 		typeSpeed: 40,
 	});
