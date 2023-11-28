@@ -1,0 +1,28 @@
+---
+interface Props {
+	date: Date;
+	author: String;
+}
+
+const { date, author } = Astro.props;
+---
+
+<time datetime={date.toISOString()}>
+	{
+		date.toLocaleDateString("en-us", {
+			year: "numeric",
+			month: "short",
+			day: "numeric",
+		})
+	}
+	//
+	{
+		author
+	}
+</time>
+
+<br>
+
+<time>
+	UNIX Epoch: {Math.floor(date.getTime() / 1000)}
+</time>

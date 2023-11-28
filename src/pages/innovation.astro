@@ -1,22 +1,93 @@
 ---
+import { getCollection } from 'astro:content';
+import FormattedDate from '../components/FormattedDate.astro';
 import Layout from "../layouts/Layout.astro";
+import '../styles/blog.css';
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+);
 ---
 
+
 <Layout title="Innovation" animated={false}>
-	<main
-		class="flex justify-center items-center flex-row flex-wrap w-11/12 2xl:w-1/2 min-h-screen pt-48 animate-[0.75s_fade-in_ease-in-out]"
-	>
-		<div class="flex flex-col">
-			<span
-				class="font-hype font-extrabold z-10 text-gradient text-5xl md:text-7xl text-left md:text-center"
-			>
-				<a href="https://docs.murexrobotics.com" target="_blank">INNOVATION AT MUREX</a>
-			</span>
-			<span class="font-sans text-white text-sm md:text-md max-w-md text-left">
-				We are constantly working on new technologies at MUREX. Feel free to
-				take a look at our <a href="https://docs.murexrobotics.com" target="_blank" class="font-bold underline underline-offset-1 hover:underline-offset-4 duration-300 transition-all">docs</a>
-				for products that are currently under development.
-			</span>
-		</div>
-	</main>
+	<style>
+		main {
+			width: 960px;
+		}
+		ul {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 2rem;
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+		ul li {
+			width: calc(50% - 1rem);
+		}
+		ul li * {
+			text-decoration: none;
+			transition: 0.2s ease;
+		}
+		ul li:first-child {
+			width: 100%;
+			margin-bottom: 1rem;
+			text-align: center;
+		}
+		ul li:first-child img {
+			width: 100%;
+		}
+		ul li:first-child .title {
+			font-size: 2.369rem;
+		}
+		ul li img {
+			margin-bottom: 0.5rem;
+			border-radius: 5px;
+		}
+		ul li a {
+			display: block;
+		}
+		ul a:hover img {
+			box-shadow: var(--box-shadow);
+		}
+		@media (max-width: 720px) {
+			ul {
+				gap: 0.5em;
+			}
+			ul li {
+				width: 100%;
+				text-align: center;
+			}
+			ul li:first-child {
+				margin-bottom: 0;
+			}
+			ul li:first-child .title {
+				font-size: 1.563em;
+			}
+		}
+	</style>
+	<body>
+		<main class="flex justify-center items-center max-w-[960px] w-auto min-h-screen pt-48 animate-[0.75s_fade-in_ease-in-out]">
+			<section>
+				<ul>
+					{
+						posts.map((post) => (
+							<li>
+								<a href={`/blog/${post.slug}/`}>
+									<img width={720} height={360} src={post.data.heroImage} alt="" />
+									<div class="py-3">
+										<span class="text-3xl m-0 leading-8 text-gray-100 duration-200 font-hype font-black">{post.data.title}</span>
+										<p class="m-0 text-neutral-500 font-hype">
+											<FormattedDate date={post.data.pubDate} author={post.data.author} />
+										</p>
+									</div>
+								</a>
+							</li>
+						))
+					}
+				</ul>
+			</section>
+		</main>
+	</body>
 </Layout>

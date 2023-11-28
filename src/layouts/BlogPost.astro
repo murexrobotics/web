@@ -1,0 +1,55 @@
+---
+import type { CollectionEntry } from "astro:content";
+import FormattedDate from "../components/FormattedDate.astro";
+import Layout from "./Layout.astro";
+import "../styles/blog.css"
+
+type Props = CollectionEntry<"blog">["data"];
+
+const { title, pubDate, heroImage, author } = Astro.props;
+---
+
+<Layout title={title} animated={false}>
+	<style>
+		main {
+			width: calc(100% - 2em);
+			max-width: 100%;
+			margin: 0;
+		}
+		.hero-image {
+			width: 100%;
+		}
+		.hero-image img {
+			display: block;
+			margin: 0 auto;
+			border-radius: 12px;
+			box-shadow: var(--box-shadow);
+		}
+	</style>
+
+	<body>
+		<main
+			class="flex justify-center items-center flex-row flex-wrap min-h-screen pt-48 animate-[0.75s_fade-in_ease-in-out]"
+		>
+			<div class="hero-image">
+				{
+					heroImage && (
+						<img width={1020} height={510} src={heroImage} alt="" />
+					)
+				}
+			</div>
+			<div
+				class="prose prose-invert prose-lg h-auto w-full md:px-0 md:w-2/3 py-12 prose-headings:font-hype prose-headings:font-extrabold prose-h2:before:content-['/_'] prose-h2:after:content-['_/'] prose-h3:before:content-['>_'] prose-a:underline prose-a:underline-offset-2 prose-a:duration-200 hover:prose-a:text-slate-300 hover:prose-a:underline-offset-4 prose-code:font-hype"
+			>
+				<div class="font-hype font-black">
+					<h1 class="p-0 m-0">{title}_</h1>
+					<div class="date font-hype font-medium text-base pt-2 text-neutral-500">
+						<FormattedDate date={pubDate} author={author} />
+					</div>
+					<hr class="m-8" />
+				</div>
+				<slot />
+			</div>
+		</main>
+	</body>
+</Layout>
