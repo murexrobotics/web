@@ -1,14 +1,18 @@
 ---
-import { getCollection } from 'astro:content';
-import FormattedDate from '../components/FormattedDate.astro';
+import { getCollection } from "astro:content";
+import FormattedDate from "../components/FormattedDate.astro";
 import Layout from "../layouts/Layout.astro";
-import '../styles/blog.css';
+import "../styles/blog.css";
 
-const posts = (await getCollection('blog')).sort(
-	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
-);
+// implemented filtering for "draft" markdown
+// only published on "innovations" if frontmatter has:
+// draft: 'NO'
+
+const posts = (await getCollection("blog")).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+).filter(prop => prop.data.draft === 'NO');
+
 ---
-
 
 <Layout title="Innovation" animated={false}>
 	<style>
@@ -68,18 +72,30 @@ const posts = (await getCollection('blog')).sort(
 		}
 	</style>
 	<body>
-		<main class="flex justify-center items-center max-w-[960px] w-auto min-h-screen pt-48 animate-[0.75s_fade-in_ease-in-out]">
+		<main
+			class="flex justify-center items-center max-w-[960px] w-auto min-h-screen pt-48 animate-[0.75s_fade-in_ease-in-out]"
+		>
 			<section>
 				<ul>
 					{
 						posts.map((post) => (
 							<li>
 								<a href={`/blog/${post.slug}/`}>
-									<img width={720} height={360} src={post.data.heroImage} alt="" />
+									<img
+										width={720}
+										height={360}
+										src={post.data.heroImage}
+										alt=""
+									/>
 									<div class="py-3">
-										<span class="text-3xl m-0 leading-8 text-gray-100 duration-200 font-hype font-black">{post.data.title}</span>
+										<span class="text-3xl m-0 leading-8 text-gray-100 duration-200 font-hype font-black">
+											{post.data.title}
+										</span>
 										<p class="m-0 text-neutral-500 font-hype">
-											<FormattedDate date={post.data.pubDate} author={post.data.author} />
+											<FormattedDate
+												date={post.data.pubDate}
+												author={post.data.author}
+											/>
 										</p>
 									</div>
 								</a>
