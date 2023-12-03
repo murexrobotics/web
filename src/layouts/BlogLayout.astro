@@ -1,0 +1,150 @@
+---
+import Navbar from "../components/navbar.astro";
+import Footer from "../components/footer.astro";
+import { SEO } from "astro-seo";
+export interface Props {
+	title: string;
+	description: string;
+	animated: boolean;
+	heroImage: string;
+	author: string;
+}
+
+const { title, animated, description, heroImage, author } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="description"
+			content={description}
+		/>
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/png" href="/favicon.png" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="sitemap" href="/sitemap-index.xml" />
+		<title>{title + " - MUREX Robotics"}</title>
+		<SEO
+			title={title + " - MUREX Robotics"}
+			description={description}
+			openGraph={{
+				basic: {
+					title: title,
+					type: "website",
+					image: heroImage,
+				},
+				article: {
+					authors: [author],
+				},
+				image: {
+					alt: "MUREX Robotics",
+				},
+				optional: {
+					description:
+						description,
+					locale: "en",
+				},
+			}}
+		/>
+	</head>
+	<body
+		class="bg-gradient-to-tr from-[#111111] via-[#2a2a2a] to-[#111111] background-animate"
+	>
+		<Navbar animated={animated} />
+		<slot />
+		<Footer />
+		<style is:global>
+			:root {
+				overflow-x: hidden;
+				margin: 0;
+				padding: 0;
+
+				--accent-gradient: linear-gradient(
+					45deg,
+					#d2d2d2,
+					#ffffff 30%,
+					white 60%
+				);
+
+				color-scheme: light, dark;
+
+				font-synthesis: none;
+				text-rendering: optimizeLegibility;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+				-webkit-text-size-adjust: 100%;
+			}
+			html {
+				font-family: system-ui, sans-serif;
+			}
+			.typed-cursor {
+				display: none;
+			}
+			@font-face {
+				font-family: "JetBrains Mono";
+				src: url("/JetBrainsMono-Variable.ttf") format("opentype");
+				font-style: normal;
+				font-stretch: normal;
+			}
+			main {
+				margin: auto;
+				padding: 1.5rem;
+				width: 100vw;
+			}
+			.text-gradient {
+				background-image: var(--accent-gradient);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-size: 400%;
+				background-position: 0%;
+			}
+			.item {
+				stroke: #fff;
+				stroke-width: 1;
+				stroke-linejoin: round;
+				stroke-linecap: round;
+			}
+			@keyframes logo {
+				0% {
+					@apply top-1/2;
+					@apply w-1/5;
+				}
+				100% {
+					@apply top-[90px];
+					@apply md:w-20;
+					@apply w-16;
+				}
+			}
+			@keyframes fade-in {
+				0% {
+					@apply opacity-0;
+				}
+				100% {
+					@apply opacity-100;
+				}
+			}
+			.background-animate {
+				background-size: 400%;
+
+				-webkit-animation: bg-animate 10s linear infinite;
+				-moz-animation: bg-animate 10s linear infinite;
+				animation: bg-animate 10s linear infinite;
+			}
+
+			@keyframes bg-animate {
+				0% {
+					background-position: 0% 20%;
+				}
+				50% {
+					background-position: 80% 30%;
+				}
+				100% {
+					background-position: 0% 60%;
+				}
+			}
+		</style>
+	</body>
+</html>

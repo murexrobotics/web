@@ -1,15 +1,15 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import FormattedDate from "../components/FormattedDate.astro";
-import Layout from "./Layout.astro";
+import BlogLayout from "./BlogLayout.astro";
 import "../styles/blog.css"
 
 type Props = CollectionEntry<"blog">["data"];
 
-const { title, pubDate, heroImage, author } = Astro.props;
+const { title, pubDate, heroImage, author, description } = Astro.props;
 ---
 
-<Layout title={title} animated={false}>
+<BlogLayout title={title} animated={false} description={description} heroImage={heroImage ?? ""} author={author}>
 	<style>
 		main {
 			width: calc(100% - 2em);
@@ -52,4 +52,4 @@ const { title, pubDate, heroImage, author } = Astro.props;
 			</div>
 		</main>
 	</body>
-</Layout>
+</BlogLayout>
