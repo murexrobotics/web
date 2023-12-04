@@ -10,15 +10,15 @@ draft: 'NO'
 _MUREX Robotics is Phillips Exeter Academy’s High School Underwater Robotics Team competing in the MATE Underwater ROV Competition._
 
 
-We have a grand vision: to democratize technology for all. Despite being just a high school robotics team, MUREX strives to uphold that standard in every way possible. In a recent project regarding the networking system of our underwater ROV, we have yet again made another stride towards our ambitious dream.
+We have a grand vision: to democratize technology for all. Despite being just a high school robotics team, MUREX strives to uphold that standard in every way possible. We've yet again made a stride towards out ambitious dream in a recent project regarding the networking system of out underwater ROV.
 
-While designing the new electrical system for the MUREX ROV, we realized the need for an embedded (and small) Ethernet switch, connecting our custom CM4-based control board, PLC module, and vision system –– consisting of multiple IP cameras –– together. Instinctively, we first turned towards the internet in search of a performant and affordable solution.
+While designing the new electrical system for the MUREX ROV, we realized the need for an embedded (and small) Ethernet switch. We needed something to connect our custom CM4-based control board, PLC module, and vision system –– consisting of multiple IP cameras. Instinctively, we turned towards the internet in search of a performant and affordable solution.
 
-Unfortunately, that search was to no avail. The 5-port [Ethernet switch](https://bluerobotics.com/store/comm-control-power/tether-interface/ethswitch/) made by Blue Robotics, a major sponsor of the MATE ROV Competition, costs a whopping $175 per unit! The [SwitchBlox](https://botblox.io/products/small-ethernet-switch), made by UK-based BotBlox specializing in Ethernet solutions, doesn’t do much better with $72. Finally, we found [Allbord](http://www.szallbord.com/detail/5koubaizhaogongyejijiaohuanjimokuai.html), another company offering cheap but robust switches. Sadly, they are based in Shenzhen, China.
+Unfortunately, that search was to no avail. The 5-port [Ethernet switch](https://bluerobotics.com/store/comm-control-power/tether-interface/ethswitch/) by Blue Robotics -- a major sponsor of the MATE ROV Competition -- costs a whopping $175 per unit! The [SwitchBlox](https://botblox.io/products/small-ethernet-switch) by BotBlox -- a company specializing in Ethernet solutions -- doesn't do much better at $72. Finally, we found [Allbord](http://www.szallbord.com/detail/5koubaizhaogongyejijiaohuanjimokuai.html), a company offering cheap but robust switches. Sadly, they are based in Shenzhen, China.
 
 So, we decided to take matters into our own hands (as usual)...
 
-After extensive research over the summer and intermittent work by our budding electrical team throughout fall term, we present the [MUREX Ethernet Switch](https://docs.murexrobotics.com/elec/boards/networking/switch): a 5-port unmanaged Fast Ethernet (100BASE-TX) switch, compliant with the IEEE 802.3u standard and matching commercial solutions in size and performance. Additionally, the BOM costs just under $15 per unit! Most importantly, it is [fully open-source](https://github.com/murexrobotics/electrical-2024/tree/main/networking/switch), so that anyone can follow and improve upon our solution.
+After extensive summer research and intermittent work by our budding electrical team throughout the fall, we present the [MUREX Ethernet Switch](https://docs.murexrobotics.com/elec/boards/networking/switch): a 5-port unmanaged Fast Ethernet (100BASE-TX) switch compliant with the IEEE 802.3u standard, matching commercial solutions in size and performance. Additionally, the BOM costs just under $15 per unit! Most importantly, it is fully [open-source](https://github.com/murexrobotics/electrical-2024/tree/main/networking/switch), so anyone can follow and improve upon our solution.
 
 ![](/blogs/murex-ethernet-switch-v1/photo5.jpg)
 
@@ -38,7 +38,7 @@ Bandwidth (client): 94.4 Mbits/sec
 Total Transfer: 113 MBytes
 ```
 
-In this brief post we hope to share our design process, as well as note the various insights and mistakes we made along the way. We are no experts, however, so we hope that our readers (yes, you!) will also embrace the open-source spirit and comment any ideas or feedback down below. Let’s get started.
+In this brief post we hope to share our design process, as well as note the various insights and mistakes we made along the way. We are no experts, however, we hope that our readers (yes, you!) will also embrace the open-source spirit and comment any ideas or feedback down below. Let’s get started.
 
 ## Design Rationale
 
@@ -78,8 +78,8 @@ A day or two later, we spun up a design in KiCAD, largely following the standard
 ![alt_text](/blogs/murex-ethernet-switch-v1/image6.png "image_tooltip")
 
 * [Bob Smith Style Termination](https://resources.altium.com/p/bob-smith-termination-it-correct-ethernet)
-  * After a lot of research and discussion, we settled on a variation of the standard Ethernet grounding strategy, where the large MLCC capacitor terminates to _nothing_. This means that there is no copper other than the differential pairs in the region between the magnetics and the connectors. (On our PCB, we have ground planes around the differential pairs as our impedance calculations were coplanar)
-  * To be frank, there is no “right” method to Ethernet grounding. Some application notes recommend grounding everything between the magnetics to the connector to CGND, while others tie CGND to DGND with a capacitor.
+  * After a lot of research and discussion, we settled on a variation of the standard Ethernet grounding strategy: the large MLCC capacitor terminates to _nothing_. This means that there is no copper other than the differential pairs in the region between the magnetics and the connectors. (On our PCB, we have ground planes around the differential pairs as our impedance calculations were coplanar)
+  * There isn't really a “right” method for Ethernet grounding. Some application notes recommend grounding everything between the magnetics to the connector to CGND, while others tie CGND to DGND with a capacitor.
   * Each method provides different benefits in terms of isolation and noise isolation, but we ultimately chose to terminate to nothing due to its simplicity and reliability.
     * This method is recommended by the Renesas industrial Ethernet application notes as well as 10/100 Ethernet ICs like the LAN8742.
   * [This video](https://www.youtube.com/watch?v=39x8C_yf-FE) (also by Zach Peterson) covers all types of Ethernet grounding in a nutshell.
@@ -88,7 +88,7 @@ A day or two later, we spun up a design in KiCAD, largely following the standard
 
 ## PCB Design
 
-To be frank, Fast Ethernet is quite lenient with design choices, but it is still good practice to follow application notes by various companies. Here are the key pointers:
+To be frank, Fast Ethernet is quite lenient with design choices, but it is still good practice to follow application notes from various companies. Here are the key pointers:
 
 * Differential pairs, RX+/RX- and TX+/TX-, should be impedance matched and short (100Ω differential controlled)
 * No copper on any layer under discrete magnetics to minimize coupling
