@@ -1,6 +1,9 @@
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
 const images = [
+	{src: "/images/gallery26.jpg", desc: "Doing it right...", date: "February 2024"},
+	{src: "/images/gallery25.jpg", desc: "Attempting the impossible...", date: "February 2024"},
+	{src: "/images/gallery27.jpg", desc: "MUREX EE Update", date: "December 2023"},
 	{src: "/images/gallery17.png", desc: "Altan and Max showing the new MUREX NFC Business Cards", date: "September 2023"},
 	{src: "/images/gallery24.png", desc: "Byran and Max test Carrier + Power Board integration", date: "September 2023"},
 	// {src: "/images/gallery23.png", desc: "First in-person meeting of the 2024 season!", date: "September 2023"},
