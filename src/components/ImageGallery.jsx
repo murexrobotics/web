@@ -1,6 +1,7 @@
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
 const images = [
+	{src: "/images/gallery27.png", desc: "MUREX meets mathematician and creator 3Blue1Brown!", date: "April 2024"},
 	{src: "/images/gallery26.jpg", desc: "Doing it right...", date: "February 2024"},
 	{src: "/images/gallery25.jpg", desc: "Attempting the impossible...", date: "February 2024"},
 	{src: "/images/gallery27.jpg", desc: "MUREX EE Update", date: "December 2023"},
