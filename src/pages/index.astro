@@ -120,9 +120,11 @@ import ImageGallery from "../components/ImageGallery";
 
 <script>
 	import Typed from "typed.js";
+	const text = [];
+	text.push("ATTEMPT ^300 THE ^300 IMPOSSIBLE.", "UNLEASH ^300 INNOVATION.", "THINK ^300 DIFFERENT.", "DO IT ^300 RIGHT.");
 	const typed = new Typed("#element", {
 		strings: [
-			"ATTEMPTING ^300 THE ^300 IMPOSSIBLE.",
+			text[Math.floor(Math.random() * 4)],
 			"WE ARE ^500 MUREX ^300 ROBOTICS.",
 		],
 		startDelay: 1500,
