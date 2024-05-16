@@ -1,6 +1,9 @@
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
 const images = [
+	{src: "/images/gallery30.jpg", desc: "MATE ROV NE Regionals Team Photo! See you at Kingsport!", date: "May 2024"},
+	{src: "/images/gallery29.jpg", desc: "M. Liu and Y. Shah deploy the MUREX ROV V3.5 during MATE ROV NE Regionals", date: "May 2024"},
+	{src: "/images/gallery31.jpg", desc: "The 2024 MUREX Electrical System", date: "May 2024"},
 	{src: "/images/gallery27.png", desc: "MUREX meets mathematician and creator 3Blue1Brown!", date: "April 2024"},
 	{src: "/images/gallery28.png", desc: "CEO Byran Huang discusses EE with Mr. Jordan Aceto of Cornell's Ornithology Lab", date: "February 2024"},
 	{src: "/images/gallery26.jpg", desc: "Doing it right...", date: "February 2024"},
