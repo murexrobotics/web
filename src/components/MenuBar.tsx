@@ -17,7 +17,10 @@ export default function Menu() {
 				}
 				onClick={handleClick}
 			>
-				<IoIosMenu className="opacity-100 h-7 w-7"></IoIosMenu>
+				<div className="flex gap-2">
+					<IoIosMenu className="opacity-100 h-7 w-7"></IoIosMenu>
+					<span className="md:visible invisible">Menu</span>
+				</div>
 			</button>
 			<div
 				className={
@@ -37,6 +40,9 @@ export default function Menu() {
 					</li>
 					<li className="hover:-translate-x-3 duration-200">
 						<a href="/ourteam">Our Team</a>
+					</li>
+					<li className="hover:-translate-x-3 duration-200">
+						<a href="/mrxEE">mrxEE</a>
 					</li>
 					<li className="hover:-translate-x-3 duration-200">
 						<a href="/innovation">Innovation</a>

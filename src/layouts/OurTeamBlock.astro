@@ -1,0 +1,42 @@
+---
+import Tilt from "react-parallax-tilt";
+import { MdOutlineMailOutline } from "react-icons/md";
+export interface Props {
+	firstName: string;
+	lastName: string;
+	classYear: string;
+    email: string;
+	role: string;
+    pictureName: string;
+}
+
+const { firstName, lastName, classYear, email, role, pictureName } = Astro.props;
+---
+
+<Tilt glareEnable={true} tiltReverse={false} tiltMaxAngleX={7} tiltMaxAngleY={7} glareMaxOpacity={0.3} glareColor={"#DDDDFF"} client:load>
+    <div class="col-span-1 flex flex-col">
+        <div
+            class={"cropPicture h-64 w-auto bg-[url('/images/people/" + pictureName + ".jpeg')] bg-cover bg-center"}
+        >
+        </div>
+        <div
+            class="col-span-1 flex h-auto w-auto flex-col border-2 border-white bg-cover bg-center px-5 py-5"
+        >
+            <h1 class="font-sans text-xl leading-none font-medium">
+                {firstName}
+            </h1>
+            <h1
+                class="font-sans text-2xl leading-none font-extrabold pb-2"
+            >
+                {lastName} '{classYear}
+            </h1>
+            <div class="flex">
+                <a href={"mailto:" + email}>
+                    <MdOutlineMailOutline className="mr-2 duration-200 text-slate-300 hover:text-white hover:scale-150"></MdOutlineMailOutline>
+                </a>
+                <span class="font-hype leading-none self-end"
+                    >{role}</span>
+            </div>
+        </div>
+    </div>
+</Tilt>
