@@ -30,8 +30,8 @@ export default function Menu() {
 				}
 				onClick={handleClick}
 			></div>
-			<div className="ease-in-out duration-500 fixed top-0 -left-48 md:-left-72 flex h-screen w-48 md:w-72 justify-center bg-gradient-to-b from-black/80 py-40 peer-[.bg-transparent]:translate-x-full">
-				<ul className="flex flex-col text-right text-sm md:text-lg gap-3 md:gap-8 text-white font-sans font-medium">
+			<div className="ease-in-out duration-500 fixed top-0 -left-48 md:-left-72 flex h-screen w-48 md:w-72 justify-center bg-gradient-to-r from-black/80 via-black/60 backdrop-blur-sm py-40 peer-[.bg-transparent]:translate-x-full">
+				<ul className="flex flex-col text-right text-sm md:text-lg gap-3 md:gap-8 text-gray-200 font-sans font-medium">
 					<li className="hover:-translate-x-3 duration-200">
 						<a href="/">Home</a>
 					</li>

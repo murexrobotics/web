@@ -1,6 +1,8 @@
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
 const images = [
+	{src: "/images/gallery32.jpg", desc: "PID and Thruster Tune Up", date: "May 2024"},
+	{src: "/images/gallery33.jpg", desc: "Underwater Footage of the MUREX ROV V3.5", date: "May 2024"},
 	{src: "/images/gallery30.jpg", desc: "MATE ROV NE Regionals Team Photo! See you at Kingsport!", date: "May 2024"},
 	{src: "/images/gallery29.jpg", desc: "M. Liu and Y. Shah deploy the MUREX ROV V3.5 during MATE ROV NE Regionals", date: "May 2024"},
 	{src: "/images/gallery31.jpg", desc: "The 2024 MUREX Electrical System", date: "May 2024"},
@@ -51,8 +53,8 @@ export default function ImageGallery() {
 							/>
                             <div className="absolute w-full h-full transition-all duration-200 ease-in-out bg-gradient-to-t from-neutral-950 to-transparent opacity-0 top-0 bottom-0 left-0 right-0 group-hover:opacity-50"></div>
                             <div className="absolute p-6 md:p-8 2xl:p-12 flex flex-col justify-end items-start w-full h-full transition-all duration-200 ease-in-out opacity-0 top-0 bottom-0 left-0 right-0 group-hover:opacity-100">
-								<p className="text-white text-sm xl:text-3xl font-bold font-hype">{image.date}</p>
-								<p className="text-white text-xs xl:text-base font-normal font-hype">{image.desc}</p>
+								<p className="text-gray-200 text-sm xl:text-3xl font-bold font-hype">{image.date}</p>
+								<p className="text-gray-200 text-xs xl:text-base font-normal font-hype">{image.desc}</p>
 							</div>
 						</div>
 					))}
