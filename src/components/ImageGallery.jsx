@@ -1,6 +1,7 @@
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
 const images = [
+	{src: "/images/gallery34.jpg", desc: "MUREX meets Filip and Piotr from CPSdrone to discuss underwater robotics!", date: "June 2024"},
 	{src: "/images/gallery32.jpg", desc: "PID and Thruster Tune Up", date: "May 2024"},
 	{src: "/images/gallery33.jpg", desc: "Underwater Footage of the MUREX ROV V3.5", date: "May 2024"},
 	{src: "/images/gallery30.jpg", desc: "MATE ROV NE Regionals Team Photo! See you at Kingsport!", date: "May 2024"},
