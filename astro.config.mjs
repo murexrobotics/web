@@ -10,5 +10,6 @@ import compress from "astro-compress";
 // https://astro.build/config
 export default defineConfig({
   site: "https://www.murexrobotics.com",
+  site: "https://www.mrx.ee/qr"
   integrations: [tailwind(), react(), partytown(), prefetch(), sitemap(), compress()]
 });
