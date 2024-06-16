@@ -82,7 +82,7 @@ A day or two later, we spun up a design in KiCAD, largely following the standard
   * There isn't really a “right” method for Ethernet grounding. Some application notes recommend grounding everything between the magnetics to the connector to CGND, while others tie CGND to DGND with a capacitor.
   * Each method provides different benefits in terms of isolation and noise isolation, but we ultimately chose to terminate to nothing due to its simplicity and reliability.
     * This method is recommended by the Renesas industrial Ethernet application notes as well as 10/100 Ethernet ICs like the LAN8742.
-  * [This video](https://www.youtube.com/watch?v=39x8C_yf-FE) (also by Zach Peterson) covers all types of Ethernet grounding in a nutshell.
+  * [This video](https://www.youtube.com/watch?v=ijQMTl7fUOg) (also by Zach Peterson) covers all types of Ethernet grounding in a nutshell.
 
 ![alt_text](/blogs/murex-ethernet-switch-v1/image1.png "image_tooltip")
 
