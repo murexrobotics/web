@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ImageGallery from "../components/ImageGallery";
+import Globe from "../components/Globe";
 ---
 
 <link rel="stylesheet" href="https://use.typekit.net/qyw8dll.css" />
@@ -8,14 +9,19 @@ import ImageGallery from "../components/ImageGallery";
 	<div class="min-h-screen overflow-x-hidden">
 		<main class="flex justify-center items-center h-screen w-screen">
 			<div
-				class="absolute flex justify-center items-center px-10 lg:px-0"
+				class="absolute flex justify-center items-center px-10 lg:px-0 opacity-95 z-10 pointer-events-none"
 			>
 				<span
 					id="element"
-					class="font-hype font-extrabold break-words z-10 text-gradient text-5xl lg:text-7xl 2xl:text-9xl text-center opacity-0 animate-[0.75s_fade-in_1.5s_forwards]"
+					class="font-hype font-extrabold break-words z-10 text-gradient text-5xl lg:text-7xl 2xl:text-9xl text-center opacity-0 animate-[0.75s_fade-in_1.5s_forwards] pointer-events-none"
 				></span>
 			</div>
 		</main>
+		<div
+			class="opacity-0 animate-[5s_fade-in_1.5s_forwards] absolute w-screen h-screen top-0 left-0 flex justify-center items-center"
+		>
+			<Globe client:load />
+		</div>
 		<main
 			class="flex justify-center items-center h-1/2 w-screen px-14 2xl:px-0 2xl:w-3/4 py-24 opacity-0 animate-[0.75s_fade-in_1.2s_ease-in-out_forwards]"
 		>
@@ -79,15 +85,43 @@ import ImageGallery from "../components/ImageGallery";
 				<span
 					class="font-hype font-extrabold z-10 text-gradient text-4xl md:text-5xl lg:tex-6xl 2xl:text-7xl text-left md:text-right"
 				>
-					OPEN SOURCE.
+					THINKING
 				</span>
 				<span
 					class="font-hype font-extrabold z-10 text-gradient text-4xl md:text-5xl lg:tex-6xl 2xl:text-7xl text-left md:text-right pb-5"
 				>
-					OPEN SOURCE.
+					GLOBAL.
 				</span>
 				<span
 					class="font-sans text-gray-200 max-w-md text-left text-sm lg:text-base md:text-right"
+				>
+					Our engineering team comes from all around the world. See
+					that globe above? There's a dot where each member is from.
+					It means that we bring unprecedented ideas to the drawing
+					board with our distinct backgrounds. It also shows our
+					development ability to design, engineer, and source
+					globally.
+				</span>
+			</div>
+		</main>
+		<main
+			class="flex justify-center items-center h-1/2 w-screen px-14 2xl:px-0 2xl:w-3/4 py-24 opacity-0 animate-[0.75s_fade-in_1.2s_ease-in-out_forwards]"
+		>
+			<div
+				class="w-full flex justify-center items-start flex-wrap flex-col"
+			>
+				<span
+					class="font-hype font-extrabold z-10 text-gradient text-4xl md:text-5xl lg:tex-6xl 2xl:text-7xl text-left"
+				>
+					OPEN SOURCE.
+				</span>
+				<span
+					class="font-hype font-extrabold z-10 text-gradient text-4xl md:text-5xl lg:tex-6xl 2xl:text-7xl text-left pb-5"
+				>
+					OPEN SOURCE.
+				</span>
+				<span
+					class="font-sans text-gray-200 text-sm lg:text-base max-w-md"
 				>
 					We fully embrace open source, making sure all of our
 					innovations are available to the community that allowed us
@@ -96,12 +130,15 @@ import ImageGallery from "../components/ImageGallery";
 				</span>
 			</div>
 		</main>
-		<main class="flex justify-center items-center opacity-0 animate-[0.75s_fade-in_1.2s_ease-in-out_forwards] h-1/2">
+		<main
+			class="flex justify-center items-center opacity-0 animate-[0.75s_fade-in_1.2s_ease-in-out_forwards] h-1/2"
+		>
 			<div class="lg:w-2/3 w-11/12">
 				<span
 					class="font-hype font-extrabold z-10 text-gradient text-4xl md:text-7xl text-center"
 				>
-					// HIGHEST-EVER ENGINEERING PRESENTATION SCORE IN MATE ROV HISTORY_ 113/100
+					// HIGHEST-EVER ENGINEERING PRESENTATION SCORE IN MATE ROV
+					HISTORY_ 113/100
 				</span>
 			</div>
 		</main>
