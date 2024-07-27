@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import ImageGallery from "../components/ImageGallery";
 import Globe from "../components/Globe";
+import { WavyBackground } from "../components/WavyBackground";
 ---
 
 <link rel="stylesheet" href="https://use.typekit.net/qyw8dll.css" />
@@ -21,6 +22,9 @@ import Globe from "../components/Globe";
 			class="opacity-0 animate-[5s_fade-in_1.5s_forwards] absolute w-screen h-screen top-0 left-0 flex justify-center items-center"
 		>
 			<Globe client:load />
+			<div class="-z-10">
+				<WavyBackground client:only />
+			</div>
 		</div>
 		<main
 			class="flex justify-center items-center h-1/2 w-screen px-14 2xl:px-0 2xl:w-3/4 py-24 opacity-0 animate-[0.75s_fade-in_1.2s_ease-in-out_forwards]"
@@ -28,12 +32,12 @@ import Globe from "../components/Globe";
 			<div
 				class="w-full flex justify-center items-start md:items-end flex-wrap flex-col"
 			>
-				<span
+				<span data-aos="fade-in" data-aos-delay="300"
 					class="font-hype font-extrabold z-10 text-gradient text-4xl md:text-5xl lg:tex-6xl 2xl:text-7xl text-left md:text-right"
 				>
 					ATTEMPT THE
 				</span>
-				<span
+				<span data-aos="fade-in" data-aos-delay="300"
 					class="font-hype font-extrabold z-10 text-gradient text-4xl md:text-5xl lg:tex-6xl 2xl:text-7xl text-left md:text-right pb-5"
 				>
 					IMPOSSIBLE.
@@ -54,12 +58,12 @@ import Globe from "../components/Globe";
 			<div
 				class="w-full flex justify-center items-start flex-wrap flex-col"
 			>
-				<span
+				<span data-aos="fade-in" data-aos-delay="300"
 					class="font-hype font-extrabold z-10 text-gradient text-4xl md:text-5xl lg:tex-6xl 2xl:text-7xl text-left"
 				>
 					DO IT RIGHT.
 				</span>
-				<span
+				<span data-aos="fade-in" data-aos-delay="300"
 					class="font-hype font-extrabold z-10 text-gradient text-4xl md:text-5xl lg:tex-6xl 2xl:text-7xl text-left pb-5"
 				>
 					DO IT MUREX.
@@ -82,12 +86,12 @@ import Globe from "../components/Globe";
 			<div
 				class="w-full flex justify-center items-start md:items-end flex-wrap flex-col"
 			>
-				<span
+				<span data-aos="fade-in" data-aos-delay="300"
 					class="font-hype font-extrabold z-10 text-gradient text-4xl md:text-5xl lg:tex-6xl 2xl:text-7xl text-left md:text-right"
 				>
 					THINKING
 				</span>
-				<span
+				<span data-aos="fade-in" data-aos-delay="300"
 					class="font-hype font-extrabold z-10 text-gradient text-4xl md:text-5xl lg:tex-6xl 2xl:text-7xl text-left md:text-right pb-5"
 				>
 					GLOBAL.
@@ -110,12 +114,12 @@ import Globe from "../components/Globe";
 			<div
 				class="w-full flex justify-center items-start flex-wrap flex-col"
 			>
-				<span
+				<span data-aos="fade-in" data-aos-delay="300"
 					class="font-hype font-extrabold z-10 text-gradient text-4xl md:text-5xl lg:tex-6xl 2xl:text-7xl text-left"
 				>
 					OPEN SOURCE.
 				</span>
-				<span
+				<span data-aos="fade-in" data-aos-delay="300"
 					class="font-hype font-extrabold z-10 text-gradient text-4xl md:text-5xl lg:tex-6xl 2xl:text-7xl text-left pb-5"
 				>
 					OPEN SOURCE.
@@ -134,7 +138,7 @@ import Globe from "../components/Globe";
 			class="flex justify-center items-center opacity-0 animate-[0.75s_fade-in_1.2s_ease-in-out_forwards] h-1/2"
 		>
 			<div class="lg:w-2/3 w-11/12">
-				<span
+				<span data-aos="fade-up" data-aos-delay="500"
 					class="font-hype font-extrabold z-10 text-gradient text-4xl md:text-7xl text-center"
 				>
 					// HIGHEST-EVER ENGINEERING PRESENTATION SCORE IN MATE ROV
@@ -150,20 +154,19 @@ import Globe from "../components/Globe";
 		<main
 			class="flex justify-center flex-col items-center h-1/2 w-3/4 py-24"
 		>
-			<span
+			<span data-aos="fade-in" data-aos-delay="500"
 				class="font-hype font-extrabold z-10 text-gradient text-5xl md:text-7xl text-center"
 			>
-				UNPARALLELED INNOVATION FOR ALL.
+				UNLEASH INNOVATION.
 			</span>
-			<span
+			<span data-aos="fade-in" data-aos-delay="500"
 				class="font-hype font-extrabold z-10 text-gradient text-5xl md:text-7xl text-center"
 			>
-				A NEW GENERATION OF HIGH PERFORMANCE ROVs.
+				DO IT RIGHT.
 			</span>
 		</main>
 	</div>
 </Layout>
-
 <script>
 	import Typed from "typed.js";
 	const text = [];

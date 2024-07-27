@@ -8,6 +8,7 @@ export interface Props {
 }
 
 const { title, animated } = Astro.props;
+import "aos/dist/aos.css";
 ---
 
 <!DOCTYPE html>
@@ -123,7 +124,7 @@ const { title, animated } = Astro.props;
 					@apply opacity-100;
 				}
 			}
-			.background-animate {
+			/* .background-animate {
 				background-size: 400%;
 
 				-webkit-animation: bg-animate 10s linear infinite;
@@ -141,7 +142,14 @@ const { title, animated } = Astro.props;
 				100% {
 					background-position: 0% 60%;
 				}
-			}
+			} */
 		</style>
 	</body>
 </html>
+
+<script>
+	import AOS from "aos";
+	AOS.init({
+		once: true,
+	});
+</script>

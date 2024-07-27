@@ -80,6 +80,7 @@ export default function Cobe() {
 				aspectRatio: 1,
 				margin: "auto",
 				position: "relative",
+				opacity: 0.85,
 			}}
 		>
 			<canvas
