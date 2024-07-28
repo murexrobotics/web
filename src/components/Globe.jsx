@@ -76,7 +76,7 @@ export default function Cobe() {
 			style={{
 				width: "100%",
 				maxWidth: "35vw",
-                minWidth: 600,
+                minWidth: 400,
 				aspectRatio: 1,
 				margin: "auto",
 				position: "relative",

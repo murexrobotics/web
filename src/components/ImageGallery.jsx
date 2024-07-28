@@ -46,20 +46,20 @@ export default function ImageGallery() {
 	return (
 		<div className="w-screen px-4 md:px-10 2xl:w-3/4 h-full">
 			<ResponsiveMasonry
-				columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}
+				columnsCountBreakPoints={{ 350: 1, 900: 2, 1200: 3 }}
 			>
 				<Masonry>
 					{images.map((image, i) => (
-						<div className="p-1 lg:p-4 relative group" key={i}>
+						<div className="m-1 lg:m-2 relative group" key={i}>
 							<img
 								src={image.src}
-								className="w-full block transition-all duration-150 ease-in-out"
+								className="w-full block transition-all duration-150 ease-in-out rounded-xl"
 								alt="MUREX Image Gallery Image"
 							/>
-                            <div className="absolute w-full h-full transition-all duration-200 ease-in-out bg-gradient-to-t from-neutral-950 to-transparent opacity-0 top-0 bottom-0 left-0 right-0 group-hover:opacity-50"></div>
-                            <div className="absolute p-6 md:p-8 2xl:p-12 flex flex-col justify-end items-start w-full h-full transition-all duration-200 ease-in-out opacity-0 top-0 bottom-0 left-0 right-0 group-hover:opacity-100">
-								<p className="text-gray-200 text-sm xl:text-3xl font-bold font-hype">{image.date}</p>
-								<p className="text-gray-200 text-xs xl:text-base font-normal font-hype">{image.desc}</p>
+                            <div className="absolute w-full rounded-xl h-full transition-all duration-200 ease-in-out bg-gradient-to-t from-gray-700 from-1% via-neutral-950 via-20% to-transparent to-60% opacity-0 top-0 bottom-0 left-0 right-0 group-hover:opacity-70"></div>
+                            <div className="absolute p-4 lg:p-6 flex flex-col justify-end items-start w-full h-full transition-all duration-200 ease-in-out opacity-0 top-0 bottom-0 left-0 right-0 group-hover:opacity-100">
+								<p className="text-gray-200 text-xl xl:text-3xl font-black uppercase font-hype">{image.date}</p>
+								<p className="text-gray-200 text-sm xl:text-md font-normal">{image.desc}</p>
 							</div>
 						</div>
 					))}

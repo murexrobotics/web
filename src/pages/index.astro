@@ -19,11 +19,11 @@ import { WavyBackground } from "../components/WavyBackground";
 			</div>
 		</main>
 		<div
-			class="opacity-0 animate-[5s_fade-in_1.5s_forwards] absolute w-screen h-screen top-0 left-0 flex justify-center items-center"
+			class="opacity-0 animate-[5s_fade-in_1.5s_forwards] absolute w-screen h-screen top-0 left-0 flex justify-center items-center overflow-hidden"
 		>
 			<Globe client:load />
 			<div class="-z-10">
-				<WavyBackground client:only />
+				<WavyBackground client:load />
 			</div>
 		</div>
 		<main
@@ -32,12 +32,16 @@ import { WavyBackground } from "../components/WavyBackground";
 			<div
 				class="w-full flex justify-center items-start md:items-end flex-wrap flex-col"
 			>
-				<span data-aos="fade-in" data-aos-delay="300"
+				<span
+					data-aos="fade-in"
+					data-aos-delay="100"
 					class="font-hype font-extrabold z-10 text-gradient text-4xl md:text-5xl lg:tex-6xl 2xl:text-7xl text-left md:text-right"
 				>
 					ATTEMPT THE
 				</span>
-				<span data-aos="fade-in" data-aos-delay="300"
+				<span
+					data-aos="fade-in"
+					data-aos-delay="300"
 					class="font-hype font-extrabold z-10 text-gradient text-4xl md:text-5xl lg:tex-6xl 2xl:text-7xl text-left md:text-right pb-5"
 				>
 					IMPOSSIBLE.
@@ -58,12 +62,16 @@ import { WavyBackground } from "../components/WavyBackground";
 			<div
 				class="w-full flex justify-center items-start flex-wrap flex-col"
 			>
-				<span data-aos="fade-in" data-aos-delay="300"
+				<span
+					data-aos="fade-in"
+					data-aos-delay="300"
 					class="font-hype font-extrabold z-10 text-gradient text-4xl md:text-5xl lg:tex-6xl 2xl:text-7xl text-left"
 				>
 					DO IT RIGHT.
 				</span>
-				<span data-aos="fade-in" data-aos-delay="300"
+				<span
+					data-aos="fade-in"
+					data-aos-delay="300"
 					class="font-hype font-extrabold z-10 text-gradient text-4xl md:text-5xl lg:tex-6xl 2xl:text-7xl text-left pb-5"
 				>
 					DO IT MUREX.
@@ -76,7 +84,7 @@ import { WavyBackground } from "../components/WavyBackground";
 					push technological boundaries and contribute to the
 					community around us. MUREX doesn't cut corners. MUREX
 					doesn't settle for OK. We do it right. We think different.
-					Unleash innovation. We attempt the impossible.
+					We unleash innovation. We attempt the impossible.
 				</span>
 			</div>
 		</main>
@@ -86,15 +94,19 @@ import { WavyBackground } from "../components/WavyBackground";
 			<div
 				class="w-full flex justify-center items-start md:items-end flex-wrap flex-col"
 			>
-				<span data-aos="fade-in" data-aos-delay="300"
+				<span
+					data-aos="fade-in"
+					data-aos-delay="300"
 					class="font-hype font-extrabold z-10 text-gradient text-4xl md:text-5xl lg:tex-6xl 2xl:text-7xl text-left md:text-right"
 				>
-					THINKING
+					UNLEASH
 				</span>
-				<span data-aos="fade-in" data-aos-delay="300"
+				<span
+					data-aos="fade-in"
+					data-aos-delay="300"
 					class="font-hype font-extrabold z-10 text-gradient text-4xl md:text-5xl lg:tex-6xl 2xl:text-7xl text-left md:text-right pb-5"
 				>
-					GLOBAL.
+					INNOVATION.
 				</span>
 				<span
 					class="font-sans text-gray-200 max-w-md text-left text-sm lg:text-base md:text-right"
@@ -102,8 +114,8 @@ import { WavyBackground } from "../components/WavyBackground";
 					Our engineering team comes from all around the world. See
 					that globe above? There's a dot where each member is from.
 					It means that we bring unprecedented ideas to the drawing
-					board with our distinct backgrounds. It also shows our
-					development ability to design, engineer, and source
+					board with our distinct backgrounds and demonstrates our
+					development ability to engineer, source, and innovate
 					globally.
 				</span>
 			</div>
@@ -114,15 +126,19 @@ import { WavyBackground } from "../components/WavyBackground";
 			<div
 				class="w-full flex justify-center items-start flex-wrap flex-col"
 			>
-				<span data-aos="fade-in" data-aos-delay="300"
+				<span
+					data-aos="fade-in"
+					data-aos-delay="300"
 					class="font-hype font-extrabold z-10 text-gradient text-4xl md:text-5xl lg:tex-6xl 2xl:text-7xl text-left"
 				>
 					OPEN SOURCE.
 				</span>
-				<span data-aos="fade-in" data-aos-delay="300"
+				<span
+					data-aos="fade-in"
+					data-aos-delay="300"
 					class="font-hype font-extrabold z-10 text-gradient text-4xl md:text-5xl lg:tex-6xl 2xl:text-7xl text-left pb-5"
 				>
-					OPEN SOURCE.
+					FOR EVERYONE.
 				</span>
 				<span
 					class="font-sans text-gray-200 text-sm lg:text-base max-w-md"
@@ -130,7 +146,9 @@ import { WavyBackground } from "../components/WavyBackground";
 					We fully embrace open source, making sure all of our
 					innovations are available to the community that allowed us
 					to innovate in the first place as well as inspiring the next
-					generation of engineers.
+					generation of engineers. We use easily accessible tooling as
+					well — KiCAD, OnShape, PlatformIO, and only a handful of
+					languages.
 				</span>
 			</div>
 		</main>
@@ -138,8 +156,10 @@ import { WavyBackground } from "../components/WavyBackground";
 			class="flex justify-center items-center opacity-0 animate-[0.75s_fade-in_1.2s_ease-in-out_forwards] h-1/2"
 		>
 			<div class="lg:w-2/3 w-11/12">
-				<span data-aos="fade-up" data-aos-delay="500"
-					class="font-hype font-extrabold z-10 text-gradient text-4xl md:text-7xl text-center"
+				<span
+					data-aos="fade-up"
+					data-aos-delay="500"
+					class="font-hype font-extrabold z-10 text-gradient text-3xl md:text-7xl lg:text-center text-left"
 				>
 					// HIGHEST-EVER ENGINEERING PRESENTATION SCORE IN MATE ROV
 					HISTORY_ 113/100
@@ -152,17 +172,19 @@ import { WavyBackground } from "../components/WavyBackground";
 			<ImageGallery client:only="react" />
 		</main>
 		<main
+			data-aos="fade-in"
+			data-aos-delay="500"
 			class="flex justify-center flex-col items-center h-1/2 w-3/4 py-24"
 		>
-			<span data-aos="fade-in" data-aos-delay="500"
+			<span
 				class="font-hype font-extrabold z-10 text-gradient text-5xl md:text-7xl text-center"
 			>
-				UNLEASH INNOVATION.
+				CREATING HIGH PERFORMANCE ROVs FOR
 			</span>
-			<span data-aos="fade-in" data-aos-delay="500"
+			<span
 				class="font-hype font-extrabold z-10 text-gradient text-5xl md:text-7xl text-center"
 			>
-				DO IT RIGHT.
+				THE MATE ROV COMPETITION AND BEYOND
 			</span>
 		</main>
 	</div>
