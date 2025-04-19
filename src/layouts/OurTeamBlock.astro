@@ -16,7 +16,7 @@ const { firstName, lastName, classYear, email, role, pictureName } = Astro.props
 <Tilt glareEnable={true} tiltReverse={false} tiltMaxAngleX={7} tiltMaxAngleY={7} glareMaxOpacity={0.3} glareColor={"#DDDDFF"} client:load>
     <div class="col-span-1 flex flex-col">
         <div
-            class={"cropPicture h-64 w-auto bg-cover bg-center " + "bg-[url('/images/people/" + (pictureName) + ".jpeg')]"}
+            class={"cropPicture h-80 w-auto bg-cover bg-center " + "bg-[url('/images/people/" + (pictureName) + ".jpeg')]"}
         >
         </div>
         <div
