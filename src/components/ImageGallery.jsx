@@ -1,6 +1,8 @@
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
 const images = [
+	{src: "/images/gallery40.jpg", desc: "A. Sivarasa, F. Liu and A. Chen test the 3DOF claw.", date: "April 2025"},
+	{src: "/images/gallery41.jpg", desc: "V. Asavathiratham directs pool deck members on ROV calibration.", date: "March 2025"},
 	{src: "/images/gallery38.jpg", desc: "Attempt the impossible.", date: "Worlds 2024"},
 	{src: "/images/gallery37.jpg", desc: "M. Liu, Y. Shah, and V. Asavathiratham deploying the ROV.", date: "Worlds 2024"},
 	{src: "/images/gallery36.jpg", desc: "Crane Lee and the team listening to the engineering presentation questions.", date: "Worlds 2024"},
