@@ -1,6 +1,8 @@
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
 const images = [
+	{src: "/images/gallery51.jpg", desc: "New mech and elec members collaborating.", date: "July 2025"},
+	{src: "/images/gallery50.jpg", desc: "New elec team dissecting the MUREX V4 system.", date: "July 2025"},
 	{src: "/images/gallery42.png", desc: "MUREX EE Update.", date: "July 2025"},
 	{src: "/images/gallery43.png", desc: "MUREX members at The Great Lakes Maritime Heritage Center.", date: "Worlds 2025"},
 	{src: "/images/gallery45.png", desc: "MUREX members set up and prepare the ROV for deployment.", date: "Worlds 2025"},
